@@ -1,0 +1,47 @@
+border-1px($color)
+  position relative
+  &::after
+    display block
+    position absolute
+    width 100%
+    left 0
+    bottom 0
+    border-top 1px solid $color
+    content ' '
+border-none()
+  &:after
+    display none
+@media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2)
+  .border-1px::after
+    -webkit-transform scaleY(0.5)
+    transform scaleY(0.5)
+@media (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)
+  .border-1px::after
+    -webkit-transform scaleY(0.7)
+    transform scaleY(0.7)
+bg-img($url)
+    background url($url+'@2x.png') no-repeat
+    @media (-webkit-min-divice-pixel-ratio:3) , (min-divice-pixel-ratio:3)
+      background url($url+'@3x.png') no-repeat
+bg-size($width,$height)
+    background-size $width $height
+
+border-top-1px($color)
+  position relative
+  &::before
+    display block
+    position absolute
+    width 100%
+    left 0
+    top 0
+    border-top 1px solid $color
+    content ' '
+
+@media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2)
+  .border-top-1px::before
+    -webkit-transform scaleY(0.5)
+    transform scaleY(0.5)
+@media (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)
+  .border-top-1px::before
+    -webkit-transform scaleY(0.7)
+    transform scaleY(0.7)
