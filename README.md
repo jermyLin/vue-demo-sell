@@ -1,4 +1,4 @@
-# 模仿饿了么vue项目
+# 模仿饿了么vue项目demo
 
 ## Build Setup
 
